@@ -16,10 +16,10 @@
             <li><a id="toggleMenu">&equiv;</a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="w01-task.html">W1 Task</a></li>
-            <li><a href="w03-task.html" class="active">W3 Task</a></li>
+            <li><a href="w03-task.html">W3 Task</a></li>
             <li><a href="w04-task.html">W4 Task</a></li>
             <li><a href="w05-task.html">W5 Task</a></li>
-            <li><a href="project.html">Project</a></li>
+            <li><a href="project.html"class="active">Project</a></li>
         </ul>
     </nav>>
     <header>
@@ -29,6 +29,7 @@
     <main id="task3">
         <section id="section1">
             <h2>Operations</h2>
+            
             <article>
                 <h3>Motion wiht constant Velocity: Calculate Instantaneous velocity</h3>
                 <div>
@@ -47,6 +48,7 @@
                     <input type="text" id="velocity" name="velocity" disabled>
                 </div>
             </article>
+            
             <article>
                 <h3>Motion with constant acceleration: Calculate Position</h3>
                 <div>
@@ -74,6 +76,7 @@
                 </div>
             </article>
             <article>
+                
                 <h3>Motion with constant acceleration: Calculate Final Velocity </h3>
                 <div>
                     <label for="acceleration3">Acceleration in meters per second:</label>
@@ -95,30 +98,117 @@
                     <input type="text" id="calculate_final_velocity" name="calculate_final_velocity" disabled>
                 </div>
             </article>
+
             <article>
-                <h3>Division</h3>
+                <h3>Motion with constant acceleration: Calculate Final Velocity with position</h3>
                 <div>
-                    <label for="dividend">Dividend:</label>
-                    <input type="text" id="dividend" name="dividend">
+                    <label for="acceleration4">Acceleration in meters per second:</label>
+                    <input type="text" id="acceleration4" name="acceleration4">
                 </div>
                 <div>
-                    <label for="divisor">Divisor:</label>
-                    <input type="text" id="divisor" name="divisor">
+                    <label for="position4">Position in meters: </label>
+                    <input type="text" id="position4" name="position4">
                 </div>
                 <div>
-                    <input type="button" id="divideNumbers" value="Divide Numbers">
+                    <label for="velocity4">Initial velocity in meters: </label>
+                    <input type="text" id="velocity4" name="velocity4">
                 </div>
                 <div>
-                    <label for="quotient">Quotient:</label>
-                    <input type="text" id="quotient" name="quotient" disabled>
+                    <input type="button" id="finalVelocityP" value="Calculate Final Velocity">
+                </div>
+                <div>
+                    <label for="calculate_final_velocityp">Final Velocity is </label>
+                    <input type="text" id="calculate_final_velocityp" name="calculate_final_velocityp" disabled>
                 </div>
             </article>
+
+            <article>
+                <h3>Calculate Force </h3>
+                <div>
+                    <label for="mass">Mass in kilograms :</label>
+                    <input type="text" id="mass" name="mass">
+                </div>
+                <div>
+                    <label for="acceleration5">Acceleration:</label>
+                    <input type="text" id="acceleration5" name="acceleration5">
+                </div>
+                <div>
+                    <input type="button" id="calculateForce" value="Calculate Force">
+                </div>
+                <div>
+                    <label for="calculate_force">The force is </label>
+                    <input type="text" id="calculate_force" name="calculate_force" disabled>
+                </div>
+            </article>
+
+            <article>
+                <h3>Calculate Normal Force</h3>
+                <div>
+                    <label for="mass2">Mass in kilograms: </label>
+                    <input type="text" id="mass2" name="mass2">
+                </div>
+                <div>
+                    <label for="gravity">Gravity(default 9.81):</label>
+                    <input type="text" id="gravity" name="gravity">
+                </div>
+                <div>
+                    <label for="angle">Angle in degrees (default 0) :</label>
+                    <input type="text" id="angle" name="angle">
+                </div>
+                <div>
+                    <input type="button" id="calculateNormal" value="Calculate Normal Force">
+                </div>
+                <div>
+                    <label for="calculate_normal">Normal Force: </label>
+                    <input type="text" id="calculate_normal" name="calculate_normal" disabled>
+                </div>
+            </article>
+
+            <article>
+                <h3>Calculate Friction Force</h3>
+                <div>
+                    <label for="friction_select">Friction coefficient</label>
+                    <select id="friction_select" name="friction_select"></select>
+                </div>
+                <div>
+                    <label for="nforce">Normal force :</label>
+                    <input type="text" id="nforce" name="nforce">
+                </div>
+                <div>
+                    <input type="button" id="frictionForce" value="Calculate Friction Force">
+                </div>
+                <div>
+                    <label for="friction_force">Friction Force:</label>
+                    <input type="text" id="friction_force" name="friction_force" disabled>
+                </div>
+            </article>
+
+            
+            <article>
+                <h3>Calculate Kinetic Energy</h3>
+                <div>
+                    <label for="mass4">Mass in kilograms :</label>
+                    <input type="text" id="mass4" name="mass4">
+                </div>
+                <div>
+                    <label for="velocity8">Velocity :</label>
+                    <input type="text" id="velocity8" name="velocity8">
+                </div>
+                <div>
+                    <input type="button" id="kineticEnergy" value="Calculate Kinetic Energy">
+                </div>
+                <div>
+                    <label for="kinetic_energy">kinetic Energy:</label>
+                    <input type="text" id="kinetic_energy" name="kinetic_energy" disabled>
+                </div>
+            </article>
+        
         </section>
-        <div>
-    
+        
+    </main>
 
      <footer>
-        &copy;<span id="year"></span> | CSE 121b | Project
+        &copy;<span id="year"></span> | CSE 121b | Project | Pedro Zelada
     </footer>
     <script src="scripts/main.js"></script>
     <script>
