@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | W06: Project: Physics Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="w01-task.html">W1 Task</a></li>
+            <li><a href="w03-task.html" class="active">W3 Task</a></li>
+            <li><a href="w04-task.html">W4 Task</a></li>
+            <li><a href="w05-task.html">W5 Task</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </nav>>
+    <header>
+        <h1>W06: Project: Physics Calculator</h1>
+    </header>
+
+    <main id="task3">
+        <section id="section1">
+            <h2>Operations</h2>
+            <article>
+                <h3>Motion wiht constant Velocity: Calculate Instantaneous velocity</h3>
+                <div>
+                    <label for="position">Position in meters :</label>
+                    <input type="text" id="position" name="position">
+                </div>
+                <div>
+                    <label for="time">Time in seconds</label>
+                    <input type="text" id="time" name="time">
+                </div>
+                <div>
+                    <input type="button" id="calculate_velocity" value="Calculate Velocity">
+                </div>
+                <div>
+                    <label for="velocity">Velocity: </label>
+                    <input type="text" id="velocity" name="velocity" disabled>
+                </div>
+            </article>
+            <article>
+                <h3>Motion with constant acceleration: Calculate Position</h3>
+                <div>
+                    <label for="initial_position">Initial position in meters:</label>
+                    <input type="text" id="initial_position" name="initial_position">
+                </div>
+                <div>
+                    <label for="initial_velocity">Initial velocity in meters :</label>
+                    <input type="text" id="initial_velocity" name="initial_velocity">
+                </div>
+                <div>
+                    <label for="time2">Time in seconds:</label>
+                    <input type="text" id="time2" name="time2">
+                </div>
+                <div>
+                    <label for="acceleration">Acceleration in meters per second:</label>
+                    <input type="text" id="acceleration" name="acceleration">
+                </div>
+                <div>
+                    <input type="button" id="calculatePosition" value="Calculate Position">
+                </div>
+                <div>
+                    <label for="calculate_position">Position: </label>
+                    <input type="text" id="calculate_position" name="calculate_position" disabled>
+                </div>
+            </article>
+            <article>
+                <h3>Motion with constant acceleration: Calculate Final Velocity </h3>
+                <div>
+                    <label for="acceleration3">Acceleration in meters per second:</label>
+                    <input type="text" id="acceleration3" name="acceleration3">
+                </div>
+                <div>
+                    <label for="time3">Time in Seconds :</label>
+                    <input type="text" id="time3" name="time3">
+                </div>
+                <div>
+                    <label for="velocity3">Initial velocity in meters:</label>
+                    <input type="text" id="velocity3" name="velocity3">
+                </div>
+                <div>
+                    <input type="button" id="calculateFinalVelocity" value="Calculate Final Velocity">
+                </div>
+                <div>
+                    <label for="calculate_final_velocity">Final Velocity</label>
+                    <input type="text" id="calculate_final_velocity" name="calculate_final_velocity" disabled>
+                </div>
+            </article>
+            <article>
+                <h3>Division</h3>
+                <div>
+                    <label for="dividend">Dividend:</label>
+                    <input type="text" id="dividend" name="dividend">
+                </div>
+                <div>
+                    <label for="divisor">Divisor:</label>
+                    <input type="text" id="divisor" name="divisor">
+                </div>
+                <div>
+                    <input type="button" id="divideNumbers" value="Divide Numbers">
+                </div>
+                <div>
+                    <label for="quotient">Quotient:</label>
+                    <input type="text" id="quotient" name="quotient" disabled>
+                </div>
+            </article>
+        </section>
+        <div>
+    
+
+     <footer>
+        &copy;<span id="year"></span> | CSE 121b | Project
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="scripts/project.js"></script>       
+</body>
+</html>
