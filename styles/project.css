@@ -90,3 +90,32 @@ footer {
 .active {
     font-weight: bold;
 }
+#sectionMath,
+#sectionNasa {
+    width: 440px;
+    height: auto;
+    border-radius: 5%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 30px #777;
+}
+
+.dark-mode body {
+    /* Dark mode styles ... */
+    background-color: #333;
+    color: white;
+}
+
+/* Add a dark mode toggle button style */
+#darkModeToggle {
+    margin: 10px;
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#darkModeToggle:hover {
+    background-color: #45a049;
+}

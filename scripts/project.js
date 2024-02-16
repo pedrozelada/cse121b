@@ -1,6 +1,57 @@
 
 
-// Creates a dictionary with the surface values  
+
+
+document.getElementById('fact').addEventListener('click', generateFact);
+
+function generateFact() {
+    const factContainer = document.getElementById('factContainer');
+    const apiUrl = 'http://numbersapi.com/random/math';
+
+    fetch(apiUrl)
+        .then(response => response.text())
+        .then(data => {
+            factContainer.innerHTML = `<p>${data}</p>`;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            factContainer.innerHTML = '<p>Failed to fetch an interesting fact. Please try again later.</p>';
+        });
+}
+
+
+document.getElementById('nasa').addEventListener('click', generateNasaImage);
+
+function generateNasaImage() {
+    const imagenasaContainer = document.getElementById('imagenasa');
+
+    // NASA API endpoint
+    const apiUrl = 'https://api.nasa.gov/planetary/apod';
+
+    // Your NASA API key
+    const apiKey = 'YOUR_NASA_API_KEY';
+
+    // Construct the URL with the API key
+    const fullUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`;
+
+    // Fetch data from the NASA API
+    fetch(fullUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Display the NASA image in the imagenasaContainer
+            const imageHtml = `<img src="${data.url}" alt="${data.title}" width="100%">`;
+            const explanationHtml = `<p>${data.explanation}</p>`;
+            imagenasaContainer.innerHTML = imageHtml + explanationHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching NASA data:', error);
+            imagenasaContainer.innerHTML = '<p>Failed to fetch NASA image. Please try again later.</p>';
+        });
+}
+
+
+
+// Object with different values of friction_coefficients 
     let friction_coefficients = {
         "Aluminum-Aluminum" : '1.4',
         "Aluminum-Mild Steel" :  '0.47',
@@ -136,3 +187,6 @@ document.getElementById('kineticEnergy').addEventListener('click', calculate_kin
  
 
 
+document.getElementById('darkModeToggle').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+});
