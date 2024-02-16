@@ -1,3 +1,5 @@
+
+
 // Creates a dictionary with the surface values  
     let friction_coefficients = {
         "Aluminum-Aluminum" : '1.4',
@@ -132,3 +134,5 @@ function calculate_kinetic() {
 }
 document.getElementById('kineticEnergy').addEventListener('click', calculate_kinetic);
  
+
+
