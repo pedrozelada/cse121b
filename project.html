@@ -21,9 +21,10 @@
             <li><a href="w05-task.html">W5 Task</a></li>
             <li><a href="project.html"class="active">Project</a></li>
         </ul>
-    </nav>>
+    </nav>
     <header>
         <h1>W06: Project: Physics Calculator</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
     </header>
 
     <main id="task3">
@@ -206,22 +207,20 @@
         </section>
         
 
-
-
-
-
         <section id="sectionMath">
             <article>
             <h2>Interesting Fact about Numbers</h2>
             <div>
-                <input type="button" id="fact" value="Generate Fact">
+                <label for="number">Enter a number wil generate an interesting fact:</label>
+                    <input type="text" id="number" name="number">
+                    <input type="button" id="fact" value="Generate Fact">
             </div>
             <div id="factContainer">
             </div>
+            
         </article>
 
         <article>
-
         
             <h2>Nasa Images</h2>
             <div>
@@ -230,8 +229,22 @@
             </div>
             </div>
         </article>
+
+        <article>
+        
+            <h2>Random dogs</h2>
+            <div>
+                <input type="button" id="dogs" value="Generate Image">
+            <div id="imagedog">
+            </div>
+            </div>
+            <p>Take care of nature</p>
+        </article>
+
+
+
         </section>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+    
     </main>
     <footer>
         &copy;<span id="year"></span> | CSE 121b | Project | Pedro Zelada

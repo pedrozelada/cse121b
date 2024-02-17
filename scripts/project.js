@@ -1,28 +1,17 @@
 
-
-
-
+const generateFact = async () =>  {
+    const number = parseFloat(document.getElementById('number').value);
+    const factContainer = document.getElementById('factContainer');
+    const apiUrl = 'https://cors-anywhere.herokuapp.com/http://numbersapi.com/';
+    const response = await fetch(apiUrl + number);
+    const data = await response.text();
+    factContainer.innerHTML = `<p>${data}</p>`;
+  
+}
 document.getElementById('fact').addEventListener('click', generateFact);
 
-function generateFact() {
-    const factContainer = document.getElementById('factContainer');
-    const apiUrl = 'http://numbersapi.com/random/math';
 
-    fetch(apiUrl)
-        .then(response => response.text())
-        .then(data => {
-            factContainer.innerHTML = `<p>${data}</p>`;
-        })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            factContainer.innerHTML = '<p>Failed to fetch an interesting fact. Please try again later.</p>';
-        });
-}
-
-
-document.getElementById('nasa').addEventListener('click', generateNasaImage);
-
-function generateNasaImage() {
+async function generateNasaImage() {
     const imagenasaContainer = document.getElementById('imagenasa');
 
     // NASA API endpoint
@@ -34,20 +23,41 @@ function generateNasaImage() {
     // Construct the URL with the API key
     const fullUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`;
 
-    // Fetch data from the NASA API
-    fetch(fullUrl)
-        .then(response => response.json())
-        .then(data => {
-            // Display the NASA image in the imagenasaContainer
-            const imageHtml = `<img src="${data.url}" alt="${data.title}" width="100%">`;
-            const explanationHtml = `<p>${data.explanation}</p>`;
-            imagenasaContainer.innerHTML = imageHtml + explanationHtml;
-        })
-        .catch(error => {
-            console.error('Error fetching NASA data:', error);
-            imagenasaContainer.innerHTML = '<p>Failed to fetch NASA image. Please try again later.</p>';
-        });
+    try {
+        // Fetch data from the NASA API
+        const response = await fetch(fullUrl);
+        const data = await response.json();
+
+        // Display the NASA image in the imagenasaContainer
+        const imageHtml = `<img src="${data.url}" alt="${data.title}" width="100%">`;
+        const explanationHtml = `<p>${data.explanation}</p>`;
+        imagenasaContainer.innerHTML = imageHtml + explanationHtml;
+    } catch (error) {
+        console.error('Error fetching NASA data:', error);
+        imagenasaContainer.innerHTML = '<p>Failed to fetch NASA image. Please try again later.</p>';
+    }
 }
+
+document.getElementById('nasa').addEventListener('click', generateNasaImage);
+
+
+
+const generatedog = async () =>  {
+   
+    const factContainer = document.getElementById('imagedog');
+    const apiUrl = 'https://dog.ceo/api/breeds/image/random';
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    const imageHtml = `<img src="${data.message}" alt="Random Dog Image" width="100%">`;
+    factContainer.innerHTML = imageHtml;
+  
+}
+document.getElementById('dogs').addEventListener('click', generatedog);
+
+
+
+
+
 
 
 

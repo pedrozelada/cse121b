@@ -33,6 +33,14 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+h1 {
+    margin: 0; 
+    width: 100%;
 }
 
 main {
@@ -114,6 +122,8 @@ footer {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: auto;
+    
 }
 
 #darkModeToggle:hover {
