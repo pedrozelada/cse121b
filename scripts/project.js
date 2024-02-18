@@ -1,11 +1,15 @@
 
+
+
+
+
 const generateFact = async () =>  {
     const number = parseFloat(document.getElementById('number').value);
     const factContainer = document.getElementById('factContainer');
-    const apiUrl = 'http://numbersapi.com/42/math?callback=showNumber';
-   const response = await fetch(apiUrl);
-    const data = await response.text();
-    factContainer.innerHTML = `<p>${data}</p>`;
+    const apiUrl = 'http://numbersapi.com/random/year?json';
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    factContainer.innerHTML = `<p>${data.text}</p>`;
   
 }
 document.getElementById('fact').addEventListener('click', generateFact);
