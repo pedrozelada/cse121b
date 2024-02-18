@@ -1,15 +1,13 @@
 
-
-
-
-
+// Generate fact with a length
 const generateFact = async () =>  {
     const number = parseFloat(document.getElementById('number').value);
     const factContainer = document.getElementById('factContainer');
-    const apiUrl = 'http://numbersapi.com/random/year?json';
-    const response = await fetch(apiUrl);
+    const apiUrl = 'https://catfact.ninja/fact?max_length=';
+    const response = await fetch(apiUrl + number);
     const data = await response.json();
-    factContainer.innerHTML = `<p>${data.text}</p>`;
+
+    factContainer.innerHTML = `<p>${data.fact}</p><p>Length: ${data.length}</p>`;
   
 }
 document.getElementById('fact').addEventListener('click', generateFact);
@@ -17,22 +15,13 @@ document.getElementById('fact').addEventListener('click', generateFact);
 
 async function generateNasaImage() {
     const imagenasaContainer = document.getElementById('imagenasa');
-
-    // NASA API endpoint
     const apiUrl = 'https://api.nasa.gov/planetary/apod';
-
-    // Your NASA API key
     const apiKey = 'YOUR_NASA_API_KEY';
-
-    // Construct the URL with the API key
     const fullUrl = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`;
 
     try {
-        // Fetch data from the NASA API
         const response = await fetch(fullUrl);
         const data = await response.json();
-
-        // Display the NASA image in the imagenasaContainer
         const imageHtml = `<img src="${data.url}" alt="${data.title}" width="100%">`;
         const explanationHtml = `<p>${data.explanation}</p>`;
         imagenasaContainer.innerHTML = imageHtml + explanationHtml;
@@ -43,7 +32,6 @@ async function generateNasaImage() {
 }
 
 document.getElementById('nasa').addEventListener('click', generateNasaImage);
-
 
 
 
