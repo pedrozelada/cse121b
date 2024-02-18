@@ -2,8 +2,8 @@
 const generateFact = async () =>  {
     const number = parseFloat(document.getElementById('number').value);
     const factContainer = document.getElementById('factContainer');
-    const apiUrl = 'https://cors-anywhere.herokuapp.com/http://numbersapi.com/';
-    const response = await fetch(apiUrl + number);
+    const apiUrl = 'http://numbersapi.com/42/math?callback=showNumber';
+   const response = await fetch(apiUrl);
     const data = await response.text();
     factContainer.innerHTML = `<p>${data}</p>`;
   
@@ -39,24 +39,6 @@ async function generateNasaImage() {
 }
 
 document.getElementById('nasa').addEventListener('click', generateNasaImage);
-
-
-
-const generatedog = async () =>  {
-   
-    const factContainer = document.getElementById('imagedog');
-    const apiUrl = 'https://dog.ceo/api/breeds/image/random';
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    const imageHtml = `<img src="${data.message}" alt="Random Dog Image" width="100%">`;
-    factContainer.innerHTML = imageHtml;
-  
-}
-document.getElementById('dogs').addEventListener('click', generatedog);
-
-
-
-
 
 
 
@@ -198,6 +180,3 @@ document.getElementById('kineticEnergy').addEventListener('click', calculate_kin
  
 
 
-document.getElementById('darkModeToggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode');
-});
