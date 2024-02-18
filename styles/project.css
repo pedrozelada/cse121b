@@ -3,13 +3,11 @@ body {
     margin: 0;
     padding: 0;
 }
-
 nav {
     background-color: #333;
     color: white;
     padding: 10px;
 }
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -18,16 +16,13 @@ nav ul {
     justify-content: space-around;
     align-items: center;
 }
-
 nav a {
     text-decoration: none;
     color: white;
 }
-
 nav a:hover {
     text-decoration: underline;
 }
-
 header {
     background-color: #4CAF50;
     color: white;
@@ -62,11 +57,9 @@ section {
 h2 {
     color: #4CAF50;
 }
-
 article {
     margin-bottom: 20px;
 }
-
 input[type="text"],
 input[type="button"],
 select {
@@ -75,12 +68,10 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
 input[type="button"]:active {
     background-color: #45a049;
     color: white;
 }
-
 footer {
     background-color: #333;
     color: white;
@@ -90,11 +81,9 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 #year {
     font-weight: bold;
 }
-
 .active {
     font-weight: bold;
 }
@@ -107,13 +96,14 @@ footer {
     box-shadow: 0 0 30px #777;
 }
 
+ /*This doesn't work */
 .dark-mode body {
-    /* Dark mode styles ... */
+  
     background-color: #333;
     color: white;
 }
 
-/* Add a dark mode toggle button style */
+
 #darkModeToggle {
     margin: 10px;
     padding: 8px;
