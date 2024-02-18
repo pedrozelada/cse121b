@@ -1,13 +1,11 @@
 
-// Generate fact with a length
 const generateFact = async () =>  {
     const number = parseFloat(document.getElementById('number').value);
     const factContainer = document.getElementById('factContainer');
-    const apiUrl = 'https://catfact.ninja/fact?max_length=';
+    const apiUrl = 'https://cors-anywhere.herokuapp.com/http://numbersapi.com/';
     const response = await fetch(apiUrl + number);
-    const data = await response.json();
-
-    factContainer.innerHTML = `<p>${data.fact}</p><p>Length: ${data.length}</p>`;
+    const data = await response.text();
+    factContainer.innerHTML = `<p>${data}</p>`;
   
 }
 document.getElementById('fact').addEventListener('click', generateFact);
